@@ -5,7 +5,7 @@ import { verifyConnectorToken } from "@/lib/connect-auth";
 
 const CONNECTOR_COOKIE = "connector.session-token";
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // ── Admin routes: use Auth.js session ──
